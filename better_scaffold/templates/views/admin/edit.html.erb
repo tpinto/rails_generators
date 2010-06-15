@@ -1,13 +1,13 @@
 <h2>Edit <%= singular_name.titleize %></h2>
 
-<%= render_form %>
+<%= admin_render_form %>
 
-<%- if actions? :show, :index -%>
+<%- if admin_actions? :show, :index -%>
 <p>
-<%- if action? :show -%>
+<%- if admin_action? :show -%>
   <%%= link_to "Show", [:admin, @<%= singular_name %>] %> |
 <%- end -%>
-<%- if action? :index -%>
+<%- if admin_action? :index -%>
   <%%= link_to "View All", admin_<%= plural_name %>_path %>
 <%- end -%>
 </p>

@@ -1,7 +1,7 @@
 <h2>New <%= singular_name.titleize %></h2>
 
-<%= render_form %>
+<%= admin_render_form %>
 
-<%- if action? :index -%>
+<%- if admin_action? :index -%>
 <p><%%= link_to "Back to List", admin_<%= plural_name %>_path %></p>
 <%- end -%>

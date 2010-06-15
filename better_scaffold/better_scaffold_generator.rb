@@ -151,7 +151,7 @@ class BetterScaffoldGenerator < Rails::Generator::Base
   
   def admin_controller_methods(dir_name)
     admin_controller_actions.map do |action|
-      read_template("#{dir_name}/#{action}.rb")
+      read_template("#{dir_name}/admin/#{action}.rb")
     end.join("  \n").strip
   end
   

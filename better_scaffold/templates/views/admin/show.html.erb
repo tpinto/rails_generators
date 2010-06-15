@@ -8,13 +8,13 @@
 <%- end -%>
 
 <p>
-<%- if action? :edit -%>
+<%- if admin_action? :edit -%>
   <%%= link_to "Edit", edit_admin_<%= singular_name %>_path(@<%= singular_name %>) %> |
 <%- end -%>
-<%- if action? :destroy -%>
+<%- if admin_action? :destroy -%>
   <%%= link_to "Destroy", [:admin, @<%= singular_name %>], :confirm => 'Are you sure?', :method => :delete %> |
 <%- end -%>
-<%- if action? :index -%>
+<%- if admin_action? :index -%>
   <%%= link_to "View All", admin_<%= plural_name %>_path %>
 <%- end -%>
 </p>
